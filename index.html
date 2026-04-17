@@ -328,9 +328,9 @@ footer {
 @media(max-width:900px){
   nav { padding:1rem 1.5rem; }
   .nav-links { display:none; }
-  .hero { grid-template-columns:1fr; }
-  .hero-light { display:grid; grid-template-rows:260px; padding-top:0; height:260px; } .hero-img-row { display:none; }
-  .hero-dark { padding:4rem 1.5rem; min-height:calc(100vh - 68px); }
+  .hero { display:flex; flex-direction:column; }
+  .hero-light { order:-1; height:280px; padding-top:0; } .hero-img-row { display:none; }
+  .hero-dark { order:0; padding:3rem 1.5rem; min-height:auto; }
   .about, .contact { grid-template-columns:1fr; }
   .about-img-panel { min-height:300px; }
   .services { padding:5rem 1.5rem; }
