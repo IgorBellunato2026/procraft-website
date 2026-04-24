@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Premium refurbishment specialists — London &amp; the South East
+# ProCraft Refurbishment Ltd · VAT 514 370 907
+
+Sitemap: https://www.procraftrefurbishment.co.uk/sitemap.xml
