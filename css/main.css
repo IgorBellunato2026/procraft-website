@@ -509,17 +509,25 @@ nav.site-nav {
 }
 .portfolio-item {
   position: relative;
+  display: block;
   background-size: cover;
   background-position: center;
   background-color: var(--mushroom);
   overflow: hidden;
   cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+.portfolio-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(15,15,15,0.35);
 }
 .portfolio-item:nth-child(1) { grid-row: span 2; }
 .portfolio-item-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(15,15,15,0.85) 0%, rgba(15,15,15,0) 60%);
+  background: linear-gradient(to top, rgba(15,15,15,0.92) 0%, rgba(15,15,15,0.35) 45%, rgba(15,15,15,0) 75%);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -528,19 +536,38 @@ nav.site-nav {
   transition: background 0.3s;
 }
 .portfolio-item:hover .portfolio-item-overlay {
-  background: linear-gradient(to top, rgba(15,15,15,0.9) 0%, rgba(15,15,15,0.2) 100%);
+  background: linear-gradient(to top, rgba(15,15,15,0.95) 0%, rgba(15,15,15,0.55) 60%, rgba(15,15,15,0.1) 100%);
 }
 .portfolio-item-tag {
-  font-size: 0.55rem;
+  font-size: 0.6rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--oak);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
 }
 .portfolio-item-title {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+  color: #fff;
+}
+.portfolio-item-link {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--oak);
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.portfolio-item:hover .portfolio-item-link {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ---------- 18. CTA Block ---------- */
