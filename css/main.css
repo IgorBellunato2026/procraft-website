@@ -412,10 +412,14 @@ nav.site-nav {
   color: var(--text-mid);
   transition: all 0.3s;
 }
-.area-pill:hover, a.area-pill:hover {
+a.area-pill:hover {
   background: var(--oak);
   color: var(--black);
   border-color: var(--oak);
+}
+span.area-pill, .area-pill-static {
+  cursor: default;
+  opacity: 0.75;
 }
 
 /* ---------- 15. FAQ ---------- */
