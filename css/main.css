@@ -879,6 +879,58 @@ footer.site-footer {
   .home-hero-content h1 { font-size: clamp(2.2rem, 8vw, 3.4rem); }
 }
 
+/* ---------- 23a. Home "Why ProCraft" full-bleed split ---------- */
+.home-why { padding: 0; }
+.home-why-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: stretch;
+  min-height: 640px;
+}
+.home-why-image {
+  background-size: cover;
+  background-position: center;
+}
+.home-why-content {
+  padding: 5rem 4rem 5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-why-content p {
+  color: rgba(255,255,255,0.7);
+  margin-top: 1.5rem;
+  line-height: 1.85;
+}
+@media (max-width: 900px) {
+  .home-why-grid {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  .home-why-image {
+    aspect-ratio: 4/3;
+    min-height: 280px;
+  }
+  .home-why-content {
+    padding: 3.5rem var(--container-pad);
+  }
+}
+
+/* ---------- 23b. Page hero feature variant (image emphasised) ---------- */
+.page-hero-grid-feature { grid-template-columns: 1fr 1.35fr; }
+.page-hero-image-feature {
+  aspect-ratio: 4/3;
+  background-position: 70% center;
+}
+@media (max-width: 900px) {
+  .page-hero-grid-feature { grid-template-columns: 1fr; }
+  .page-hero-image-feature {
+    aspect-ratio: 5/4;
+    background-position: center;
+    min-height: 260px;
+  }
+}
+
 /* ---------- 23. Mobile breakpoint ---------- */
 @media (max-width: 1024px) {
   .feature-grid, .process-steps, .invest-tiers, .related-grid, .footer-top {
